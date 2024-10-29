@@ -102,6 +102,7 @@ header {
   border: 1px solid #ddd;
   padding: 15px;
   text-align: center;
+  cursor: pointer; /* เปลี่ยนให้มี cursor เป็น pointer เมื่อ hover */
 }
 
 .product-card img {
@@ -144,4 +145,23 @@ header {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* ปรับปรุงปุ่มลงชื่อเข้าใช้ให้สวยงาม */
+button {
+  margin-top: 10px;
+  width: 100%; /* ทำให้ปุ่มเต็มความกว้าง */
+}
+
+#googleLogin, #facebookLogin, #appleLogin {
+  background-color: #f1f1f1; /* สีพื้นหลัง */
+  border: 1px solid #ccc; /* ขอบ */
+  color: #333; /* สีตัวอักษร */
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#googleLogin:hover, #facebookLogin:hover, #appleLogin:hover {
+  background-color: #ddd; /* เปลี่ยนสีเมื่อ hover */
 }
