@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รายละเอียดสินค้า</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">SASOM</div>
+  </header>
+
+  <!-- Product Detail Section -->
+  <section class="product-detail">
+    <h2 id="productName">ชื่อสินค้า</h2>
+    <img id="productImage" src="" alt="Product Image">
+    <p id="productPrice">ราคา: ฿0</p>
+    <button id="buyNow">ซื้อเลย</button>
+    <button id="addToCart">หยิบใส่ตะกร้า</button>
+  </section>
+
+  <script>
+    // ดึงข้อมูลสินค้าที่เลือกจาก localStorage
+    const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+
+    if (selectedProduct) {
+        document.getElementById("productName").innerText = selectedProduct.name;
+        document.getElementById("productImage").src = selectedProduct.image;
+        document.getElementById("productPrice").innerText = "ราคา: ฿" + selectedProduct.price;
+
+        // ฟังก์ชันสำหรับปุ่ม "ซื้อเลย"
+        document.getElementById("buyNow").addEventListener("click", function() {
+            alert("คุณได้ซื้อ " + selectedProduct.name);
+        });
+
+        // ฟังก์ชันสำหรับปุ่ม "หยิบใส่ตะกร้า"
+        document.getElementById("addToCart").addEventListener("click", function() {
+            alert(selectedProduct.name + " ได้ถูกหยิบใส่ตะกร้าแล้ว!");
+        });
+    } else {
+        alert("ไม่พบข้อมูลสินค้า");
+    }
+  </script>
+
+</body>
+</html>
