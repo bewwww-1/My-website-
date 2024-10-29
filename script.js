@@ -1,8 +1,3 @@
-// ฟังก์ชันสำหรับปุ่ม "SHOP NOW"
-document.getElementById('shopNowBtn').addEventListener('click', function() {
-    alert('คุณได้คลิกที่ SHOP NOW!');
-});
-
 // ฟังก์ชันสำหรับปุ่มเข้าสู่ระบบ
 const loginBtn = document.getElementById('loginBtn');
 const modal = document.getElementById('loginModal');
@@ -33,30 +28,20 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     modal.style.display = 'none'; // ซ่อน modal หลังจากเข้าสู่ระบบ
 });
 
-// ฟังก์ชันสำหรับค้นหาสินค้า
-document.querySelector('.search-bar').addEventListener('input', function() {
-    const searchTerm = this.value.toLowerCase(); // คำค้นหา
-    const productCards = document.querySelectorAll('.product-card'); // การ์ดสินค้าทั้งหมด
-
-    productCards.forEach(card => {
-        const productName = card.querySelector('p').innerText.toLowerCase(); // ชื่อสินค้า
-        if (productName.includes(searchTerm)) {
-            card.style.display = 'block'; // แสดงการ์ดที่ตรงกับคำค้นหา
-        } else {
-            card.style.display = 'none'; // ซ่อนการ์ดที่ไม่ตรง
-        }
-    });
+// ฟังก์ชันการลงชื่อเข้าใช้ด้วย Google
+document.getElementById('googleLogin').addEventListener('click', function() {
+    alert('ลงชื่อเข้าใช้ด้วย Google');
+    // แทนที่ด้วยการเรียกใช้ API ของ Google
 });
 
-// ตัวอย่างการคลิกที่การ์ดสินค้า
-document.querySelectorAll('.product-card').forEach(card => {
-    card.addEventListener('click', function() {
-        const productData = {
-            name: card.getAttribute('data-name'),
-            image: card.getAttribute('data-image'),
-            price: card.getAttribute('data-price')
-        };
-        localStorage.setItem('selectedProduct', JSON.stringify(productData));
-        location.href = 'product.html';
-    });
+// ฟังก์ชันการลงชื่อเข้าใช้ด้วย Facebook
+document.getElementById('facebookLogin').addEventListener('click', function() {
+    alert('ลงชื่อเข้าใช้ด้วย Facebook');
+    // แทนที่ด้วยการเรียกใช้ API ของ Facebook
+});
+
+// ฟังก์ชันการลงชื่อเข้าใช้ด้วย Apple
+document.getElementById('appleLogin').addEventListener('click', function() {
+    alert('ลงชื่อเข้าใช้ด้วย Apple');
+    // แทนที่ด้วยการเรียกใช้ API ของ Apple
 });
