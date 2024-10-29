@@ -23,7 +23,7 @@ document.querySelector('.search-bar').addEventListener('keypress', function(even
 // ฟังก์ชันสำหรับการคลิกที่สินค้า
 document.querySelectorAll('.product-card').forEach(function(card) {
     card.addEventListener('click', function() {
-        window.location.href = 'product-details.html'; // เปลี่ยนไปยังหน้ารายละเอียดสินค้า
+        window.location.href = 'product.html'; // เปลี่ยนไปยังหน้ารายละเอียดสินค้า
     });
 });
 
