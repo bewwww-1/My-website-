@@ -1,3 +1,8 @@
+// ฟังก์ชันสำหรับปุ่ม "SHOP NOW"
+document.getElementById('shopNowBtn').addEventListener('click', function() {
+    alert('คุณได้คลิกที่ SHOP NOW!');
+});
+
 // ฟังก์ชันสำหรับปุ่มเข้าสู่ระบบ
 const loginBtn = document.getElementById('loginBtn');
 const modal = document.getElementById('loginModal');
@@ -45,3 +50,9 @@ document.getElementById('appleLogin').addEventListener('click', function() {
     alert('ลงชื่อเข้าใช้ด้วย Apple');
     // แทนที่ด้วยการเรียกใช้ API ของ Apple
 });
+
+// ฟังก์ชันเปิดหน้าสินค้า
+function openProductPage(product) {
+    alert('เปิดหน้าการซื้อสินค้าสำหรับ: ' + product);
+    // คุณสามารถเปลี่ยนให้ไปยังหน้าสินค้าจริงได้ที่นี่
+}
