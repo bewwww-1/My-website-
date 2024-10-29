@@ -47,3 +47,16 @@ document.querySelector('.search-bar').addEventListener('input', function() {
         }
     });
 });
+
+// ตัวอย่างการคลิกที่การ์ดสินค้า
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const productData = {
+            name: card.getAttribute('data-name'),
+            image: card.getAttribute('data-image'),
+            price: card.getAttribute('data-price')
+        };
+        localStorage.setItem('selectedProduct', JSON.stringify(productData));
+        location.href = 'product.html';
+    });
+});
