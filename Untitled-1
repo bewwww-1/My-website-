@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตัวอย่างเว็บไซต์</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">SASOM</div>
+    <input type="text" placeholder="ค้นหาสินค้า..." class="search-bar">
+    <button class="login-btn">ลงชื่อเข้าใช้</button>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="banner-text">
+      <h2>แจกโค้ดลดแรง ไม่มีหลอก ลดสูงสุด 12%</h2>
+      <p>พร้อมลุ้นจุ๊บฟรี! ที่ SASOM</p>
+      <button class="shop-now">SHOP NOW</button>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <div class="category">Ship Now</div>
+    <div class="category">New Drop</div>
+    <div class="category">Lucky Draw</div>
+    <div class="category">In Style</div>
+    <div class="category">Trending</div>
+  </section>
+  
+  <!-- Products Section -->
+  <section class="products">
+    <h2>Meant For You</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="img/product1.jpg" alt="New Balance 530 White Silver">
+        <p>New Balance 530 White Silver</p>
+        <p>ราคาเริ่มต้น ฿2,109</p>
+      </div>
+      <div class="product-card">
+        <img src="img/product2.jpg" alt="adidas Samba OG Cloud White">
+        <p>adidas Samba OG Cloud White</p>
+        <p>ราคาเริ่มต้น ฿2,489</p>
+      </div>
+      <!-- Add more product cards as needed -->
+    </div>
+  </section>
+
+</body>
+</html>
