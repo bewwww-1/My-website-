@@ -7,16 +7,26 @@
 
 body {
   font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Header */
 header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+}
+
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
 }
 
 .logo {
@@ -25,9 +35,8 @@ header {
 }
 
 .search-bar {
-  padding: 8px;
-  width: 50%;
-  min-width: 200px;
+  padding: 10px;
+  width: 60%;
   max-width: 400px;
 }
 
@@ -37,59 +46,62 @@ header {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  text-decoration: none;
 }
 
 /* Banner Section */
 .banner {
-  background: url('img/banner.jpg') no-repeat center center;
+  background: url('img/banner.jpg') no-repeat center;
   background-size: cover;
+  padding: 80px 20px;
   color: #fff;
-  padding: 60px 20px;
   text-align: center;
 }
 
-.banner-text h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
+.banner h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
 }
 
-.banner-text p {
-  font-size: 18px;
-  margin-bottom: 20px;
+.banner p {
+  font-size: 20px;
+  margin-bottom: 25px;
 }
 
 .shop-now {
   background-color: #ff9900;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 25px;
+  font-size: 18px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
 }
 
 /* Categories Section */
 .categories {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.categories .container {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
-  background-color: #f8f8f8;
 }
 
 .category {
-  text-align: center;
+  font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /* Products Section */
 .products {
-  padding: 20px;
+  padding: 40px 0;
 }
 
 .products h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
   text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
 }
 
 .product-grid {
@@ -100,10 +112,10 @@ header {
 
 .product-card {
   background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
-  cursor: pointer; /* เปลี่ยนให้มี cursor เป็น pointer เมื่อ hover */
+  border: 1px solid #ddd;
+  cursor: pointer;
 }
 
 .product-card img {
@@ -112,31 +124,16 @@ header {
   margin-bottom: 10px;
 }
 
-/* Login Page Styles */
-.login-container {
-  max-width: 400px;
-  margin: 100px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  background-color: #fefefe;
-  text-align: center;
-}
-
-.login-container h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+.product-card p {
   font-size: 16px;
-  cursor: pointer;
-  border: 1px solid #ddd;
-  background-color: #f1f1f1;
+  color: #333;
 }
 
-button:hover {
-  background-color: #ddd;
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
 }
