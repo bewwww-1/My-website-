@@ -32,3 +32,18 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     alert('ลงชื่อเข้าใช้สำเร็จสำหรับ ' + username);
     modal.style.display = 'none'; // ซ่อน modal หลังจากเข้าสู่ระบบ
 });
+
+// ฟังก์ชันสำหรับค้นหาสินค้า
+document.querySelector('.search-bar').addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase(); // คำค้นหา
+    const productCards = document.querySelectorAll('.product-card'); // การ์ดสินค้าทั้งหมด
+
+    productCards.forEach(card => {
+        const productName = card.querySelector('p').innerText.toLowerCase(); // ชื่อสินค้า
+        if (productName.includes(searchTerm)) {
+            card.style.display = 'block'; // แสดงการ์ดที่ตรงกับคำค้นหา
+        } else {
+            card.style.display = 'none'; // ซ่อนการ์ดที่ไม่ตรง
+        }
+    });
+});
