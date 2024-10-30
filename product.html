@@ -8,12 +8,17 @@
 </head>
 <body>
 
+  <header>
+    <div class="logo">SASOM</div>
+    <button class="language-btn" onclick="changeLanguage()">เปลี่ยนภาษา</button>
+  </header>
+
   <div class="product-details">
     <img src="img/product1.jpg" alt="New Balance 530 White Silver">
     <h2>New Balance 530 White Silver</h2>
     <p>ราคา: ฿2,109</p>
-    <button class="buy-now" onclick="buyNow({name: 'New Balance 530 White Silver', price: 2109})">ซื้อเลย</button>
-    <button class="add-to-cart" onclick="addToCart({name: 'New Balance 530 White Silver', price: 2109})">เพิ่มไปยังตะกร้า</button>
+    <button class="buy-now" onclick="buyNow()">ซื้อเลย</button>
+    <button class="add-to-cart" onclick="addToCart()">เพิ่มไปยังตะกร้า</button>
   </div>
 
   <script src="script.js"></script>
