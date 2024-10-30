@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ลงชื่อเข้าใช้ - SASOM</title>
+  <title>เข้าสู่ระบบ | SASOM Clone</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="login-container">
-    <h2>ลงชื่อเข้าใช้</h2>
-    <button id="googleLogin">ลงชื่อเข้าใช้ด้วย Google</button>
-    <button id="facebookLogin">ลงชื่อเข้าใช้ด้วย Facebook</button>
-    <button id="appleLogin">ลงชื่อเข้าใช้ด้วย Apple</button>
+    <h2>เข้าสู่ระบบ</h2>
+    <button class="social-login google">เข้าสู่ระบบด้วย Google</button>
+    <button class="social-login facebook">เข้าสู่ระบบด้วย Facebook</button>
+    <button class="social-login apple">เข้าสู่ระบบด้วย Apple</button>
+    <form id="loginForm">
+      <label for="username">ชื่อผู้ใช้:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">รหัสผ่าน:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">เข้าสู่ระบบ</button>
+    </form>
   </div>
 
 </body>
