@@ -4,19 +4,29 @@
         <img src="path-to-image.jpg" alt="Product Image">
     </div>
     <div class="product-info">
-        <h2>adidas Samba OG Cloud White Core Black</h2>
-        <p>ADIDAS | B75806</p>
+        <h2 class="product-name">adidas Samba OG Cloud White Core Black</h2>
+        <p class="product-sku">ADIDAS | B75806</p>
+        
         <div class="pricing">
-            <span>ราคาเริ่มต้น: ฿1,800</span>
-            <span>ตั้งราคาสูงสุด: ฿2,900</span>
-            <span>ราคาตามล่าสุด: ฿2,797</span>
+            <span class="price-label">ราคาเริ่มต้น: </span>
+            <span class="price-value">฿1,800</span>
         </div>
+        <div class="pricing">
+            <span class="price-label">ตั้งราคาสูงสุด: </span>
+            <span class="price-value">฿2,900</span>
+        </div>
+        <div class="pricing">
+            <span class="price-label">ราคาตามล่าสุด: </span>
+            <span class="price-value">฿2,797</span>
+        </div>
+
         <div class="product-details">
-            <p>แบรนด์: adidas</p>
-            <p>SKU: B75806</p>
-            <p>สี: CLOUD WHITE/CORE BLACK/CLEAR GRANITE</p>
-            <p>วันจำหน่าย: 08/12/2018</p>
+            <p><strong>แบรนด์:</strong> adidas</p>
+            <p><strong>SKU:</strong> B75806</p>
+            <p><strong>สี:</strong> CLOUD WHITE/CORE BLACK/CLEAR GRANITE</p>
+            <p><strong>วันจำหน่าย:</strong> 08/12/2018</p>
         </div>
+
         <div class="purchase-buttons">
             <button class="sell-button">ขาย</button>
             <button class="buy-button">ซื้อ</button>
@@ -25,12 +35,15 @@
 </div>
 
 <style>
-/* Add styles to match the SASOM design */
+/* Styles for the product details page to closely match SASOM's design */
 .product-details-container {
     display: flex;
     max-width: 1000px;
     margin: auto;
     padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
 }
 .product-image img {
     width: 100%;
@@ -41,14 +54,33 @@
     margin-left: 20px;
     flex: 1;
 }
-.pricing span {
-    display: block;
+.product-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+.product-sku {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 20px;
+}
+.pricing {
+    display: flex;
     font-size: 18px;
     margin: 5px 0;
+}
+.price-label {
+    font-weight: bold;
+    color: #333;
+}
+.price-value {
+    margin-left: 5px;
+    color: #333;
 }
 .product-details p {
     font-size: 16px;
     color: #555;
+    margin: 5px 0;
 }
 .purchase-buttons {
     display: flex;
@@ -59,8 +91,10 @@
     flex: 1;
     padding: 15px;
     font-size: 16px;
+    font-weight: bold;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
 }
 .sell-button {
     background-color: black;
