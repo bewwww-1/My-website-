@@ -1,19 +1,20 @@
 // Cart functionality
 let cart = [];
 
-function addToCart() {
-  alert('สินค้าถูกเพิ่มในตะกร้า');
-  // Add item to cart array (in a real app, send to server or local storage)
-  cart.push({ name: 'New Balance 530 White Silver', price: 2109 });
+function addToCart(product) {
+  cart.push(product);
+  alert(product.name + ' ถูกเพิ่มในตะกร้า');
 }
 
 function openCart() {
-  alert('คุณมี ' + cart.length + ' รายการในตะกร้า');
+  let cartItems = cart.map(item => item.name).join(', ');
+  alert('คุณมี ' + cart.length + ' รายการในตะกร้า: ' + cartItems);
 }
 
 // Buy Now functionality
-function buyNow() {
-  window.location.href = 'checkout.html';
+function buyNow(product) {
+  addToCart(product);
+  window.location.href = 'checkout.html'; // Update this to point to your checkout page
 }
 
 // Search functionality
