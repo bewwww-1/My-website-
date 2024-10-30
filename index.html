@@ -14,19 +14,17 @@
     <input type="text" placeholder="ค้นหาสินค้า..." class="search-bar">
     <button class="login-btn" onclick="window.location.href='login.html'">ลงชื่อเข้าใช้</button>
     <button class="cart-btn" onclick="openCart()">ตะกร้าสินค้า</button>
+    <button class="language-btn" onclick="changeLanguage()">เปลี่ยนภาษา</button>
   </header>
 
-  <!-- Promotions Section -->
-  <section class="promotions">
-    <h2>โปรโมชั่นพิเศษ</h2>
-    <div class="promotion-banner">
-      <img src="img/promotion.jpg" alt="โปรโมชั่นพิเศษ">
-    </div>
+  <!-- Promotional Banner -->
+  <section class="promo-banner">
+    <img src="img/promo.jpg" alt="โปรโมชั่น" class="promo-img">
   </section>
 
-  <!-- Products Section -->
-  <section class="products">
-    <h2>Meant For You</h2>
+  <!-- Featured Products Section -->
+  <section class="featured-products">
+    <h2>สินค้าที่น่าสนใจ</h2>
     <div class="product-grid">
       <div class="product-card" onclick="window.location.href='product.html?id=1'">
         <img src="img/product1.jpg" alt="New Balance 530 White Silver">
@@ -38,25 +36,14 @@
         <p>adidas Samba OG Cloud White</p>
         <p>ราคาเริ่มต้น ฿2,489</p>
       </div>
+      <!-- เพิ่มสินค้าเพิ่มเติมที่นี่ -->
     </div>
   </section>
 
-  <!-- Latest Products Section -->
-  <section class="latest-products">
-    <h2>สินค้ามาใหม่</h2>
-    <div class="product-grid">
-      <div class="product-card" onclick="window.location.href='product.html?id=3'">
-        <img src="img/product3.jpg" alt="New Balance 550">
-        <p>New Balance 550</p>
-        <p>ราคาเริ่มต้น ฿3,299</p>
-      </div>
-      <div class="product-card" onclick="window.location.href='product.html?id=4'">
-        <img src="img/product4.jpg" alt="Nike Air Force 1">
-        <p>Nike Air Force 1</p>
-        <p>ราคาเริ่มต้น ฿3,499</p>
-      </div>
-    </div>
-  </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 SASOM Clone. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
