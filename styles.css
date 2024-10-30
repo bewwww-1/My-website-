@@ -1,4 +1,4 @@
-/* รีเซ็ตสไตล์ */
+/* CSS รีเซ็ต */
 * {
   margin: 0;
   padding: 0;
@@ -7,26 +7,16 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 /* Header */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 15px 0;
-}
-
-header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
 }
 
 .logo {
@@ -35,8 +25,9 @@ header .container {
 }
 
 .search-bar {
-  padding: 10px;
-  width: 60%;
+  padding: 8px;
+  width: 50%;
+  min-width: 200px;
   max-width: 400px;
 }
 
@@ -48,60 +39,51 @@ header .container {
   cursor: pointer;
 }
 
+/* Cart Icon */
+.cart-icon {
+  cursor: pointer;
+  position: relative;
+  font-size: 20px;
+  color: #fff;
+}
+
 /* Banner Section */
 .banner {
-  background: url('img/banner.jpg') no-repeat center;
+  background: url('img/banner.jpg') no-repeat center center;
   background-size: cover;
-  padding: 80px 20px;
   color: #fff;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.banner h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
+.banner-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-.banner p {
-  font-size: 20px;
-  margin-bottom: 25px;
+.banner-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .shop-now {
   background-color: #ff9900;
   color: #fff;
-  padding: 12px 25px;
-  font-size: 18px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
-}
-
-/* Categories Section */
-.categories {
-  background-color: #fff;
-  padding: 20px 0;
-}
-
-.categories .container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.category {
   font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 /* Products Section */
 .products {
-  padding: 40px 0;
+  padding: 20px;
 }
 
 .products h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 30px;
 }
 
 .product-grid {
@@ -112,10 +94,9 @@ header .container {
 
 .product-card {
   background-color: #fff;
-  padding: 20px;
-  text-align: center;
   border: 1px solid #ddd;
-  cursor: pointer;
+  padding: 15px;
+  text-align: center;
 }
 
 .product-card img {
@@ -124,45 +105,32 @@ header .container {
   margin-bottom: 10px;
 }
 
-.product-card p {
-  font-size: 16px;
-  color: #333;
+/* Cart Modal */
+#cartModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 15px 0;
-  text-align: center;
-  font-size: 14px;
-}
-
-/* login.css */
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-}
-
-.login-form {
+#cartModal .modal-content {
   background-color: #fff;
+  margin: 10% auto;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
 
-.login-form h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
+#cartItems {
+  max-height: 200px;
+  overflow-y: auto;
 }
 
-.social-login-buttons {
+.cart-item {
   display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
