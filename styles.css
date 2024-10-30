@@ -134,3 +134,47 @@ header {
   justify-content: space-between;
   margin-bottom: 10px;
 }
+
+/* Login Page */
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.social-login {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.google { background-color: #db4437; color: white; }
+.facebook { background-color: #4267b2; color: white; }
+.apple { background-color: #333; color: white; }
+
+/* Product Details Page */
+.product-details {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.product-details img {
+  max-width: 100%;
+  height: auto;
+}
+
+.buy-now, .add-to-cart {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.buy-now { background-color: #ff9900; color: white; }
+.add-to-cart { background-color: #333; color: white; }
