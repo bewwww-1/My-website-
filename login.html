@@ -1,32 +1,78 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>เข้าสู่ระบบ | SASOM Clone</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<!-- login.html -->
+<div class="login-container">
+    <div class="login-form">
+        <div class="form-header">
+            <button id="registerBtn">สมัครสมาชิก</button>
+            <button id="loginBtn" class="active">ลงชื่อเข้าใช้</button>
+        </div>
+        <div class="form-body">
+            <input type="email" placeholder="อีเมล">
+            <input type="password" placeholder="รหัสผ่าน">
+            <button class="login-button">ลงชื่อเข้าใช้</button>
+            <a href="#">ลืมรหัสผ่าน?</a>
+        </div>
+        <div class="social-login">
+            <button class="facebook-login">ลงชื่อเข้าใช้ด้วย Facebook</button>
+            <button class="google-login">ลงชื่อเข้าใช้ด้วย Google</button>
+            <button class="apple-login">ลงชื่อเข้าใช้ด้วย Apple</button>
+        </div>
+    </div>
+</div>
 
-  <header>
-    <div class="logo">SASOM</div>
-    <button class="language-btn" onclick="changeLanguage()">เปลี่ยนภาษา</button>
-  </header>
-
-  <div class="login-container">
-    <h2>เข้าสู่ระบบ</h2>
-    <button class="social-login google">เข้าสู่ระบบด้วย Google</button>
-    <button class="social-login facebook">เข้าสู่ระบบด้วย Facebook</button>
-    <button class="social-login apple">เข้าสู่ระบบด้วย Apple</button>
-    <form id="loginForm">
-      <label for="username">ชื่อผู้ใช้:</label>
-      <input type="text" id="username" name="username" required>
-      <label for="password">รหัสผ่าน:</label>
-      <input type="password" id="password" name="password" required>
-      <button type="submit">เข้าสู่ระบบ</button>
-    </form>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<style>
+/* Add styles to match the SASOM design */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+.login-form {
+    width: 400px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.form-header button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+}
+.form-header button.active {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+.form-body input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.social-login button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+</style>
