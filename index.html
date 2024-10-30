@@ -3,66 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WEB Clone</title>
+  <title>เว็บไซต์ SASOM Clone</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="logo">WEB</div>
-      <input type="text" placeholder="ค้นหาสินค้า..." class="search-bar">
-      <button class="login-btn" id="loginBtn">ลงชื่อเข้าใช้</button>
-    </div>
-  </header>
+<header>
+  <div class="logo">SASOM</div>
+  <input type="text" placeholder="ค้นหาสินค้า..." class="search-bar">
+  <button class="login-btn" id="loginBtn">ลงชื่อเข้าใช้</button>
+  <div class="cart-icon" id="cartIcon">
+    🛒 <span id="cartCount">0</span>
+  </div>
+</header>
 
-  <!-- Banner Section -->
-  <section class="banner">
-    <div class="banner-text">
-      <h2>ลดสูงสุด 12%!</h2>
-      <p>โปรโมชั่นดีๆ ที่ WEB</p>
-      <button class="shop-now" id="shopNowBtn">SHOP NOW</button>
-    </div>
-  </section>
+<section class="banner">
+  <div class="banner-text">
+    <h2>โปรโมชั่นดีๆ ที่ SASOM</h2>
+    <p>ลดสูงสุดถึง 12%</p>
+    <button class="shop-now">SHOP NOW</button>
+  </div>
+</section>
 
-  <!-- Categories Section -->
-  <section class="categories">
-    <div class="container">
-      <div class="category">Ship Now</div>
-      <div class="category">New Drop</div>
-      <div class="category">Lucky Draw</div>
-      <div class="category">In Style</div>
-      <div class="category">Trending</div>
+<section class="products">
+  <h2>สินค้าสำหรับคุณ</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="img/product1.jpg" alt="New Balance 530 White Silver">
+      <p>New Balance 530 White Silver</p>
+      <p>ราคาเริ่มต้น ฿2,109</p>
+      <button onclick="addToCart('New Balance 530 White Silver', 2109)">Add to Cart</button>
     </div>
-  </section>
-
-  <!-- Products Section -->
-  <section class="products">
-    <div class="container">
-      <h2>Meant For You</h2>
-      <div class="product-grid">
-        <div class="product-card" onclick="goToProductPage('product1')">
-          <img src="img/product1.jpg" alt="New Balance 530 White Silver">
-          <p>New Balance 530 White Silver</p>
-          <p>ราคาเริ่มต้น ฿2,109</p>
-        </div>
-        <div class="product-card" onclick="goToProductPage('product2')">
-          <img src="img/product2.jpg" alt="adidas Samba OG Cloud White">
-          <p>adidas Samba OG Cloud White</p>
-          <p>ราคาเริ่มต้น ฿2,489</p>
-        </div>
-      </div>
+    <div class="product-card">
+      <img src="img/product2.jpg" alt="adidas Samba OG Cloud White">
+      <p>adidas Samba OG Cloud White</p>
+      <p>ราคาเริ่มต้น ฿2,489</p>
+      <button onclick="addToCart('adidas Samba OG Cloud White', 2489)">Add to Cart</button>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2024 WEB. สงวนลิขสิทธิ์</p>
-    </div>
-  </footer>
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="toggleCart()">&times;</span>
+    <h2>ตะกร้าสินค้า</h2>
+    <div id="cartItems"></div>
+    <p>ยอดรวม: ฿<span id="cartTotal">0</span></p>
+    <button onclick="checkout()">ไปที่ชำระเงิน</button>
+  </div>
+</div>
 
-  <script src="script.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
